@@ -44,7 +44,7 @@ class TestPr0grammAPIRequest < Test::Unit::TestCase
 
     item_info = pr0.item_info(879_293)
 
-    assert_equal(667, item_info[:comments].size)
-    assert_equal(150, item_info[:tags].size)
+    assert_equal(692, item_info[:comments].size)
+    assert_equal(169, item_info[:tags].size)
   end
 end
