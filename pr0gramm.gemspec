@@ -18,5 +18,5 @@ Gem::Specification.new do |s|
   s.files         = `git ls-files`.split("\n")
   s.require_paths = ['lib']
 
-  s.add_runtime_dependency 'rest-client', '~> 1.8.0', '~> 1.8.0'
+  s.add_runtime_dependency 'rest-client', '~> 1.8', '~> 1.8'
 end
