@@ -1,6 +1,6 @@
 class Pr0gramm
   class Badge
-    attr_reader :link, :image, :description, :created
+    attr_reader :link, :description, :created
 
     def initialize(api, badge_data)
       @api = api
