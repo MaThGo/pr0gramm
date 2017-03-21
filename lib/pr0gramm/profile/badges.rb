@@ -57,7 +57,7 @@ class Pr0gramm
       end
 
       def comments_from_template(first_comment, level)
-        badge = BADGES[:comments][:template]
+        badge = BADGES[:comments][:template].dup
 
         newest_comment_time = first_comment['created'].to_i + 1
 
@@ -84,7 +84,7 @@ class Pr0gramm
       end
 
       def registered_from_template(since, year_s)
-        badge = BADGES[:years][:template]
+        badge = BADGES[:years][:template].dup
 
         badge['link']        = format(badge['link'], @name)
         badge['description'] = format(badge['description'], since, year_s)
