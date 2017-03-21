@@ -1,1 +1,3 @@
 export.sh
+.env
+.byebug_history
