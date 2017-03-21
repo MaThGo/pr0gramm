@@ -13,8 +13,6 @@ class Pr0gramm
         parameter.delete(:promoted) unless parameter[:promoted]
         parameter[:flags]    = Pr0gramm::Flags.digit(parameter[:flags])
 
-        p parameter.inspect
-
         result = @requester.api_get('/items/get', parameter)
 
         # TODO: Remaining attributes
