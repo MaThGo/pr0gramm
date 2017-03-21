@@ -4,6 +4,11 @@ require 'uri'
 class Pr0gramm
   class Requester
     module API
+      def initialize
+        @session = {}
+        @cookies = nil
+      end
+
       def api_get(route = '', parameter = {}, request_data = {})
         request_data = {
           accept: :json
