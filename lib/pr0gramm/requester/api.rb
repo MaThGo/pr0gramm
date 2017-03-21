@@ -97,7 +97,7 @@ class Pr0gramm
 
         @cookies = @response.cookies
 
-        cookies_to_session(JSON.parse URI.unescape(@cookies['me']))
+        cookies_to_session(JSON.parse(URI.decode_www_form(@cookies['me']).join('')))
       end
     end
   end
