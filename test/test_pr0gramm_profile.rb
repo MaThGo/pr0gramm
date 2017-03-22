@@ -3,11 +3,16 @@ require 'test/unit'
 
 class TestPr0grammProfile < Test::Unit::TestCase
   def test_own_not_logged_in
-    pr0 = Pr0gramm.new
+    anon = Pr0gramm.new
 
-    assert_raise_message('Not logged in.') do
-      pr0.profile
+    assert_raise_message('404 Not Found') do # No username, no user can be found
+      anon.profile
     end
+
+    # likes are never THAT public
+    public_profile = anon.profile(ENV['PR0_USERNAME'])
+    assert_equal(0, public_profile.like_count)
+    assert_equal(false, public_profile.likes_are_public)
   end
 
   def test_own

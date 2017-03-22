@@ -19,7 +19,7 @@ class TestPr0grammMessage < Test::Unit::TestCase
     assert_equal(@message_text, message.message)
     assert_equal('Neuschwuchtel', message.sender_mark)
     assert_equal(ENV['PR0_USERNAME'], message.sender_name)
-    assert_equal('Gesperrt', message.recipient_mark)
+    assert_equal('Altschwuchtel', message.recipient_mark)
     assert_equal(@god, message.recipient_name)
   end
 
