@@ -3,6 +3,5 @@
 * Migrate Tests to MiniTest
 * Write proper rdoc comments
 * Use bundler for dependencies
-* Source comments with TODOs
-
-
+* Remaining profile attributes (See lib/pr0gramm/profile.rb:19 for details)
+* Other source comments with TODOs
