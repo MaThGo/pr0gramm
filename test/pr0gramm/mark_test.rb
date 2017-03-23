@@ -1,7 +1,6 @@
-require 'pr0gramm'
-require 'test/unit'
+require 'test_helper'
 
-class TestPr0grammMark < Test::Unit::TestCase
+class Pr0grammMarkTest < Minitest::Test
   def test_string
     assert_equal('Schwuchtel', Pr0gramm::Mark.string(0))
     assert_equal('Neuschwuchtel', Pr0gramm::Mark.string(1))

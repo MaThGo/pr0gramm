@@ -1,7 +1,6 @@
-require 'pr0gramm'
-require 'test/unit'
+require 'test_helper'
 
-class TestPr0grammRequester < Test::Unit::TestCase
+class Pr0grammRequesterTest < Minitest::Test
   def test_no_login
     pr0 = Pr0gramm.new
 
@@ -20,12 +19,11 @@ class TestPr0grammRequester < Test::Unit::TestCase
     assert_equal(ENV['PR0_PASSWORD'], requester.password)
   end
 
-  # def test_login_fail
-
-  #   assert_raise_message("Login as 'cha0s' failed.") {
-  #     pr0 = Pr0gramm.new(username: 'cha0s', password: 'fattyb00mb00m')
-  #   }
-  # end
+  def test_login_fail
+    assert_raises("Login as 'cha0s' failed.") {
+      pr0 = Pr0gramm.new(username: 'cha0s', password: 'fattyb00mb00m')
+    }
+  end
 
   def test_subdomains
     pr0 = Pr0gramm.new

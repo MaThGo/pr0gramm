@@ -1,7 +1,6 @@
-require 'pr0gramm'
-require 'test/unit'
+require 'test_helper'
 
-class TestPr0grammMessage < Test::Unit::TestCase
+class Pr0grammMessageTest < Minitest::Test
   def setup
     @god = ENV['GOD']
     @message_text = "Hi #{@god}, thanks for coding me :)"

@@ -1,11 +1,10 @@
-require 'pr0gramm'
-require 'test/unit'
+require 'test_helper'
 
-class TestPr0grammProfile < Test::Unit::TestCase
+class Pr0grammProfileTest < Minitest::Test
   def test_own_not_logged_in
     anon = Pr0gramm.new
 
-    assert_raise_message('404 Not Found') do # No username, no user can be found
+    assert_raises('404 Not Found') do # No username, no user can be found
       anon.profile
     end
 
