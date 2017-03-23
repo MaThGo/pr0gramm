@@ -1,3 +1,4 @@
+require 'bundler/gem_tasks'
 require 'rake/testtask'
 require 'rdoc/task'
 
@@ -15,7 +16,7 @@ RDoc::Task.new(rdoc_task_names) do |t|
   t.rdoc_files.include('README.md', 'lib/**/*.rb')
   t.title     = 'pr0gramm API Gem Documentation'
   t.main      = 'README.md'
-  t.rdoc_dir  = 'docs'
+  t.rdoc_dir  = 'doc'
   t.generator = 'hanna'
 end
 
