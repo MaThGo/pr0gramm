@@ -1,7 +1,6 @@
-require 'pr0gramm'
-require 'test/unit'
+require 'test_helper'
 
-class TestPr0grammAPIRequest < Test::Unit::TestCase
+class Pr0grammAPIRequestTest < Minitest::Test
   def test_items_default
     pr0 = Pr0gramm.new(username: ENV['PR0_USERNAME'], password: ENV['PR0_PASSWORD'])
 
@@ -36,7 +35,7 @@ class TestPr0grammAPIRequest < Test::Unit::TestCase
     assert_equal(120, items.size)
 
     not_promoted = items.select { |item| item.promoted == 0 }
-    assert_not_equal(120, not_promoted.size)
+    refute_equal(120, not_promoted.size)
   end
 
   def test_item_info
@@ -44,7 +43,7 @@ class TestPr0grammAPIRequest < Test::Unit::TestCase
 
     item_info = pr0.item_info(879_293)
 
-    assert_equal(667, item_info[:comments].size)
-    assert_equal(150, item_info[:tags].size)
+    assert_equal(692, item_info[:comments].size)
+    assert_equal(169, item_info[:tags].size)
   end
 end

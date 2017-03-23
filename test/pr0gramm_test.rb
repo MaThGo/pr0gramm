@@ -1,12 +1,11 @@
-require 'pr0gramm'
-require 'test/unit'
+require 'test_helper'
 
-class TestPr0gramm < Test::Unit::TestCase
+class Pr0grammTest < Minitest::Test
   def test_initialize_no_param
     pr0 = Pr0gramm.new
 
     assert_equal([:sfw], pr0.flags)
-    assert_true(pr0.promoted)
+    assert(pr0.promoted)
 
     assert_instance_of(Pr0gramm::Requester, pr0.requester)
   end
@@ -15,7 +14,7 @@ class TestPr0gramm < Test::Unit::TestCase
     pr0 = Pr0gramm.new(flags: [:nsfl], promoted: false)
 
     assert_equal([:nsfl], pr0.flags)
-    assert_false(pr0.promoted)
+    refute(pr0.promoted)
 
     assert_instance_of(Pr0gramm::Requester, pr0.requester)
   end

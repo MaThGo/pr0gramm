@@ -18,6 +18,7 @@ class Pr0gramm
   include Pr0gramm::API
 
   def initialize(options = {})
+    super()
     options = {
       flags:    [:sfw],
       promoted: true

@@ -13,6 +13,7 @@ class Pr0gramm
     include Pr0gramm::Requester::Content
 
     def initialize(options)
+      super()
       options = {
         host:           'pr0gramm.com',
         api_path:       '/api',

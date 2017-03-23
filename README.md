@@ -18,7 +18,7 @@ Add it to your Gemfile
 
     gem "pr0gramm"
 
-and follow normal [Bundler](http://gembundler.com/) installation and execution procedures.
+and follow normal [Bundler][] installation and execution procedures.
 
 ## Usage
 
@@ -193,7 +193,14 @@ string = Pr0gramm::Mark.string( 8 )
 string = Pr0gramm::Mark.string( 9 )
 ```
 
-## Tests
+## Development
+
+To install the dependencies, just run
+
+    $ bundle install
+
+
+### Test
 
 To run the tests export the following two variables:
 
@@ -208,15 +215,30 @@ After that run tests via rake:
 rake test
 ```
 
+This will run the [minitest][] test cases located in the `test/` directory.
+
 Attentiont: Some tests will fail caused by usage of special API test user.
 
-## TODO
+### Documentation
 
-- documentation
-- moar tests
-- Proper session handling
-- "pp" cookie?!
-- Make use of REST::Clients cookie_jar method
-- Refactoring of Item handling / searches
-- Refactoring of Item Information handling (Tags / Comments)
-- Refactoring of Comment handling in inbox result
+This project uses [rdoc][] for documentation in combination with the
+[hanna-nouveau][] template
+
+You can generate the documentation
+
+    $ rake rdoc
+
+This will create a `doc/` folder containing the documentation.
+
+### Build
+
+Running
+
+    $ rake build
+
+will build the `pkg/pr0gramm-{version}.gem` file.
+
+[minitest]:      https://github.com/seattlerb/minitest "MiniTest"
+[rdoc]:          http://docs.seattlerb.org/rdoc/       "rdoc"
+[hanna-nouveau]: https://github.com/rdoc/hanna-nouveau "hanna-nouveu"
+[bundler]:       http://gembundler.com/                "Bundler"

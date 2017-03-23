@@ -1,7 +1,6 @@
-require 'pr0gramm'
-require 'test/unit'
+require 'test_helper'
 
-class TestPr0grammFlags < Test::Unit::TestCase
+class Pr0grammFlagsTest < Minitest::Test
   def test_symbol
     assert_equal(:sfw, Pr0gramm::Flags.symbol(1))
     assert_equal(:nsfw, Pr0gramm::Flags.symbol(2))

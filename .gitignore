@@ -1,1 +1,11 @@
-export.sh
+.env
+.byebug_history
+/.bundle/
+/.yardoc
+/Gemfile.lock
+/_yardoc/
+/coverage/
+/doc/
+/pkg/
+/spec/reports/
+/tmp/
